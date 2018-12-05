@@ -1,0 +1,18 @@
+@import "variables";
+
+body {
+  background-image: url();
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "roboto", san-serif, medium;
+}
+
+.canvas {
+    width: 90%;
+    height: 90%;
+    background-color: $mygrey;
+    border: 1px solid black;
+}

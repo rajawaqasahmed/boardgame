@@ -1,0 +1,59 @@
+body {
+  background-image: url();
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "roboto", san-serif, medium;
+}
+
+.canvas {
+  width: 90%;
+  height: 90%;
+  background-color: #9fa09f;
+  border: 1px solid black;
+}
+
+.myfooter {
+  background-color: #9fa09f;
+  color: #9fa09f !important;
+  height: 70px;
+  vertical-align: middle;
+  padding: 2%;
+  margin-top: 20px;
+}
+
+.my-card {
+  border: solid 1px #d8212f !important;
+  text-align: center !important;
+  display: table !important;
+  margin: auto !important;
+  width: 100%;
+  height: auto;
+}
+.my-card-image {
+  width: 50%;
+  height: inherit;
+}
+.my-card:hover {
+  box-shadow: 2px 2px 2px 2px grey;
+}
+
+.play_button {
+  border-radius: 50% !important;
+  min-height: 70px;
+  min-width: 70px;
+}
+
+.heading_img {
+  max-width: 200px;
+}
+
+.game-style {
+  width: 100%;
+  max-height: 100%;
+  border: solid 1px;
+}
+
+/*# sourceMappingURL=style.css.map */
