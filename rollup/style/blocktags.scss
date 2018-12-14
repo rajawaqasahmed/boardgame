@@ -1,7 +1,7 @@
 @import "variables";
 
 body {
-  background-image: url();
+  background-image: url("../image/texture_bg.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13,6 +13,6 @@ body {
 .canvas {
     width: 90%;
     height: 90%;
-    background-color: $mygrey;
+    background-color: $mywhite;
     border: 1px solid black;
 }

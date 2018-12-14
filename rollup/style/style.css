@@ -1,5 +1,5 @@
 body {
-  background-image: url();
+  background-image: url("../image/texture_bg.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,12 +11,30 @@ body {
 .canvas {
   width: 90%;
   height: 90%;
-  background-color: #9fa09f;
+  background-color: #fff;
   border: 1px solid black;
 }
 
+.jumbotron {
+  background-color: transparent !important;
+  color: #fff !important;
+  text-align: center;
+  height: 50px !important;
+  padding: 0px !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .display-4 {
+    font-size: 18px !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .display-4 {
+    font-size: 32px !important;
+  }
+}
 .myfooter {
-  background-color: #9fa09f;
+  background-color: #000000;
   color: #9fa09f !important;
   height: 70px;
   vertical-align: middle;
@@ -46,6 +64,16 @@ body {
   min-width: 70px;
 }
 
+.btn-outline-danger {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: #fff !important;
+  color: #d8212f !important;
+}
+
 .heading_img {
   max-width: 200px;
 }
@@ -54,6 +82,28 @@ body {
   width: 100%;
   max-height: 100%;
   border: solid 1px;
+}
+
+.scorecard {
+  padding: 5px;
+}
+
+#p1RandNum {
+  font-size: 45px;
+  color: #fff;
+}
+
+#p2RandNum {
+  font-size: 45px;
+  color: #fff;
+}
+
+#playersDetailsDiv1 {
+  color: #fff;
+}
+
+#playersDetailsDiv2 {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

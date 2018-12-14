@@ -1,10 +1,25 @@
 @import "blocktags";
 @import "variables";
 
-
-
+.jumbotron{
+    background-color: transparent !important;
+    color: $mywhite !important;
+    text-align: center;
+    height: 50px !important;
+    padding: 0px !important;
+}
+@media only screen and (max-width: 700px) {
+    .display-4{
+        font-size: 18px !important;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .display-4{
+        font-size: 32px !important;
+    }
+}
 .myfooter{
-    background-color: $mygrey;
+    background-color: $myblack;
     color: $mygrey !important;
     height: 70px;
     vertical-align: middle;
@@ -37,6 +52,14 @@
     min-width: 70px;
     
 }
+.btn-outline-danger{
+    border-color: $mywhite !important;
+    color: $mywhite !important;
+}
+.btn-outline-danger:hover{
+    background-color: $mywhite !important;
+    color: $myred !important;
+}
 .heading_img{
     max-width: 200px;
 }
@@ -48,83 +71,26 @@
     border: solid 1px;
   
 }
+.scorecard{
+    padding: 5px;
+    
+}
 
+#p1RandNum{
+    font-size: 45px;
+    color: $mywhite;
+}
+#p2RandNum{
+    font-size: 45px;
+    color: $mywhite;
+}
+//#p1Name{
+//    color: $mywhite;
+//}
+#playersDetailsDiv1{
+    color: $mywhite;
+}
+#playersDetailsDiv2{
+    color: $mywhite;
+}
 
-//.input:checked ~ #option_select{
-//    border:2px solid green;
-//    font-weight: bold !important;
-//    background:yellow;
-//    color: red !important;
-//}
-
-//.nav{
-//    &bar {
-//        box-shadow: 5px 5px 5px 5px grey !important;
-//        &-light{
-//            background-color: $mygrey !important;
-//            border: none !important;
-//        }
-//        &:hover{
-//            box-shadow: 5px 5px 5px 5px $myblack !important;
-//        }
-//    }
-//    &-link{
-//        color: $mypurple !important;
-//        &:hover{
-//            color: black !important;
-//        }
-//    }
-//    
-//}
-
-//.my-card {
-//    border: solid 1px $mypurple !important;
-//    text-align: center !important;
-//    display: table !important;
-//    margin: auto !important;
-//    width: 85%;
-//    &-image {
-//        width: 100%;
-//        height: inherit;
-//    }
-//    &:hover{
-//        box-shadow: 2px 2px 2px 2px grey;
-//    }
-//    &-button {
-//        background-color: $mypurple;
-//        color: white !important;
-//        width: 100%;
-//        &:hover{
-//            color: black !important;
-//            box-shadow: 2px 2px 2px 2px black;
-//        }
-//
-//    }
-//}
-//
-//
-//.card-body, .card-header, .card-footer {
-//        padding: 1px !important;
-//        margin: 1px !important;
-//    }
-
-//
-//
-//@media screen and (max-width: 768px) {
-//    .inner{
-//        height: 100px;
-//    }
-//    .card-body, .card-header, .card-footer {
-//        padding: 0px !important;
-//        margin: 0px !important;
-//    }
-//}
-//@media screen and (max-width: 1200px) {
-//    .inner{
-//        height: 100px;
-//    }
-//    .card-body, .card-header, .card-footer {
-//        padding: 1px !important;
-//        margin: 1px !important;
-//    }
-//}
