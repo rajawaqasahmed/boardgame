@@ -5,14 +5,14 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "roboto", san-serif, medium;
+  font-family: "roboto", san-serif, medium !important;
 }
 
 .canvas {
   width: 90%;
   height: 90%;
   background-color: #fff;
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 .jumbotron {
@@ -21,25 +21,7 @@ body {
   text-align: center;
   height: 50px !important;
   padding: 0px !important;
-}
-
-@media only screen and (max-width: 700px) {
-  .display-4 {
-    font-size: 18px !important;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  .display-4 {
-    font-size: 32px !important;
-  }
-}
-.myfooter {
-  background-color: #000000;
-  color: #9fa09f !important;
-  height: 70px;
-  vertical-align: middle;
-  padding: 2%;
-  margin-top: 20px;
+  font-family: Srisakdi, cursive, sans-serif !important;
 }
 
 .my-card {
@@ -68,7 +50,6 @@ body {
   border-color: #fff !important;
   color: #fff !important;
 }
-
 .btn-outline-danger:hover {
   background-color: #fff !important;
   color: #d8212f !important;
@@ -98,12 +79,40 @@ body {
   color: #fff;
 }
 
+.scores {
+  font-size: 72px;
+}
+
 #playersDetailsDiv1 {
   color: #fff;
 }
 
 #playersDetailsDiv2 {
   color: #fff;
+}
+
+.icon_index {
+  width: 30px;
+}
+
+.myfooter {
+  background-color: #000000;
+  color: #9fa09f !important;
+  height: 70px;
+  vertical-align: middle;
+  padding: 2%;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .display-4 {
+    font-size: 18px !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .display-4 {
+    font-size: 32px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

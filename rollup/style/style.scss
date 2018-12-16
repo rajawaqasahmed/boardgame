@@ -7,24 +7,7 @@
     text-align: center;
     height: 50px !important;
     padding: 0px !important;
-}
-@media only screen and (max-width: 700px) {
-    .display-4{
-        font-size: 18px !important;
-    }
-}
-@media only screen and (max-width: 1000px) {
-    .display-4{
-        font-size: 32px !important;
-    }
-}
-.myfooter{
-    background-color: $myblack;
-    color: $mygrey !important;
-    height: 70px;
-    vertical-align: middle;
-    padding: 2%;
-    margin-top: 20px;
+    font-family: Srisakdi, cursive, sans-serif !important;
 }
 
 // my designed card
@@ -55,11 +38,12 @@
 .btn-outline-danger{
     border-color: $mywhite !important;
     color: $mywhite !important;
+    &:hover{
+        background-color: $mywhite !important;
+        color: $myred !important;
+    }
 }
-.btn-outline-danger:hover{
-    background-color: $mywhite !important;
-    color: $myred !important;
-}
+
 .heading_img{
     max-width: 200px;
 }
@@ -84,13 +68,35 @@
     font-size: 45px;
     color: $mywhite;
 }
-//#p1Name{
-//    color: $mywhite;
-//}
+.scores{
+    font-size: 72px;
+}
+
 #playersDetailsDiv1{
     color: $mywhite;
 }
 #playersDetailsDiv2{
     color: $mywhite;
 }
+.icon_index{
+    width: 30px;
+}
+.myfooter{
+    background-color: $myblack;
+    color: $mygrey !important;
+    height: 70px;
+    vertical-align: middle;
+    padding: 2%;
+    margin-top: 20px;
+}
 
+@media only screen and (max-width: 700px) {
+    .display-4{
+        font-size: 18px !important;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .display-4{
+        font-size: 32px !important;
+    }
+}

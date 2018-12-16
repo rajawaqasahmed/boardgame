@@ -7,12 +7,12 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "roboto", san-serif, medium;
+  font-family: "roboto", san-serif, medium !important;
 }
 
 .canvas {
     width: 90%;
     height: 90%;
     background-color: $mywhite;
-    border: 1px solid black;
+    border: 1px solid $myblack;
 }

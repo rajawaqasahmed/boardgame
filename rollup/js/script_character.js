@@ -10,10 +10,9 @@ fetch('https://anapioficeandfire.com/api/characters?pageSize=50&page=12')
 .catch(err => console.log(err))
 
 var AllPlayers = [];
-var player = {
-    name: "",
-    id: ""
-}
+
+p1Name = "";
+p2Name = "";
 function gameCharacter(mycards) {
     console.log(mycards);
     var details = document.getElementById('cards');
@@ -53,7 +52,9 @@ function myFunction() {
         
         document.getElementById('p1Name').innerHTML = p_name[0];
         document.getElementById('p2Name').innerHTML = p_name[1];
-
+        p1Name = p_name[0];
+        p2Name = p_name[1];
+        
         x.style.display = "none";
         y.style.display = "block";  
     }
@@ -152,8 +153,8 @@ function checkMinMaxTwo(myid){
  p1_x_currentLocation = 3;   
  p1_y_currentLocation = 3;   
  p2_x_currentLocation = 3;   
- p2_y_currentLocation = 23;
- stepToken = 30;
+ p2_y_currentLocation = 57;
+ stepToken = 75;
  xDist = 3;
 
      
@@ -173,7 +174,7 @@ var p2row = 1;
   // Background Canvas Drawings 
 var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext('2d');
-ctx.scale(5,5);
+ctx.scale(2,2);
     var p1_token = canvas.getContext("2d");    
     var p2_token = canvas.getContext("2d"); 
     var p3_token = canvas.getContext("2d"); 
@@ -189,7 +190,7 @@ var squares = canvas.getContext("2d");
 function drawTokenP1(x,y){
     p1_token = canvas.getContext("2d");  
     p1_token.beginPath;
-    p1_token.fillRect(x,y,5,5);
+    p1_token.fillRect(x,y,15,15);
     p1_token.fillStyle = '#edff00';
     p1_token.fill();
     p1_token.closePath();
@@ -197,34 +198,34 @@ function drawTokenP1(x,y){
 function drawTokenP2(x,y){
     p2_token = canvas.getContext("2d"); 
      p2_token.beginPath;
-    p2_token.fillRect(x,y,5,5);
+    p2_token.fillRect(x,y,15,15);
     p2_token.fillStyle = '#30b1f2';
     p2_token.fill();
     p2_token.closePath();
 }
   function clearTokenP2(x,y){
       p2_token = canvas.getContext("2d");  
-        p2_token.clearRect(x,y,5,5);
+        p2_token.clearRect(x,y,15,15);
 
 }
   function clearTokenP1(x,y){
       p1_token = canvas.getContext("2d");  
-        p1_token.clearRect(x,y,5,5);
+        p1_token.clearRect(x,y,15,15);
 }
 
 function drawDigit(dig, xvalue, yvalue){
          
-  digits.font = 20  + "px Arial";
+  digits.font = 40  + "px Arial";
   digits.textAlign = 'center';
   digits.textBaseline = 'middle';
   digits.fillStyle = '#d8212f';
-  digits.fillText(dig, xvalue+15, yvalue+15);
+  digits.fillText(dig, xvalue+37, yvalue+37);
 }
 function drawBackgroundCanvas(){
        
     var xvalue=0;
     var yvalue=0;
-    var step=30;
+    var step=75;
     var dig = 1;
     
 
@@ -239,36 +240,37 @@ function drawBackgroundCanvas(){
             // boxes and number background of game
             if(y%2==0)
                 {
-                    squares.strokeRect(xvalue,yvalue,30,30);
+                    squares.strokeRect(xvalue,yvalue,step,step);
                     //Traps Hide Text
-                    if (dig==6 || dig==19 || dig==29 || dig==37 || dig==48){}
+                    if (dig==6 || dig==19 || dig==29 || dig==37 || dig==48 || dig==50){}
                     else
                        drawDigit(dig, xvalue, yvalue);
                     
-                    xvalue = xvalue +step;
+                    xvalue = xvalue + step;
                     dig++;
                     
                 }
             else
                {
                    xvalue = xvalue-step;
-                   squares.strokeRect(xvalue,yvalue,30,30);
+                   squares.strokeRect(xvalue,yvalue,step,step);
                    //Traps Hide Text
-                if (dig==6 || dig==19 || dig==29 || dig==37 || dig==48){}
+                if (dig==6 || dig==19 || dig==29 || dig==37 || dig==48 || dig==50){}
                 else
                     drawDigit(dig, xvalue, yvalue);
                    dig++;
                }
         }
-        yvalue = yvalue+30;
+        yvalue = yvalue+step;
     }  
    
  // Draw traps
-  ctx.drawImage(document.getElementById('imgSnake'), (30*5),0);//no6
-  ctx.drawImage(document.getElementById('imgSnake'), (30*1),30);//no19
-  ctx.drawImage(document.getElementById('imgSnake'), (30*8),30+30);//no29
-  ctx.drawImage(document.getElementById('imgSnake'), (30*3),30+30+30);//no37
-  ctx.drawImage(document.getElementById('imgSnake'), (30*7),30+30+30+30);//no48
+  ctx.drawImage(document.getElementById('imgSnake'), (step*5),step* 0);//no6
+  ctx.drawImage(document.getElementById('imgSnake'), (step*1),step*1);//no19
+  ctx.drawImage(document.getElementById('imgSnake'), (step*8),step*2);//no29
+  ctx.drawImage(document.getElementById('imgSnake'), (step*3),step*3);//no37
+  ctx.drawImage(document.getElementById('imgSnake'), (step*7),step*4);//no48
+  ctx.drawImage(document.getElementById('imgCastle'), (step*9),step*4);//no48
  
     
 }
@@ -377,15 +379,24 @@ document.getElementById("myP1RollButton").addEventListener("click", function() {
         
         if(p1Score>=50){
             playing=false;
-            alert("Player 1 Wins");
-            window.location.href = "index.html";
+            alert(" "+ p1Name +" Wins");
+            
+//            document.getElementById("winnerName").innerHTML = p1Name; 
+            
+                    
+        // Hide canvas div and show fireworks div
+//        var hideGame = document.getElementById("divShow");
+//        var showFireworks = document.getElementById("bg");
+//        hideGame.style.display = "none";  
+//        showFireworks.style.display = "block"; 
+
+            
+           window.location.href = "final.html";
 
         }
         
     }
-   console.log(
-    "p1row: " +p1row+ ", p1score: " + p1Score + ", p1x: " + p1_x_currentLocation + ", p1y: " + p1_y_currentLocation + ", rand: " + rand
-   );
+   //console.log("p1row: " +p1row+ ", p1score: " + p1Score + ", p1x: " + p1_x_currentLocation + ", p1y: " + p1_y_currentLocation + ", rand: " + rand);
 
 }, false);
     
@@ -478,11 +489,20 @@ document.getElementById("myP2RollButton").addEventListener("click", function() {
     
     if (p2Score>=50){
         playing=false;
-        alert("Player 2 Wins");
-        window.location.href = "index.html";
+            alert(" "+ p2Name +" Wins");
+            
+//            document.getElementById("winnerName").innerHTML = p2Name; 
+        
+        
+        // Hide canvas div and show fireworks div
+//        var hideGame = document.getElementById("divShow");
+//        var showFireworks = document.getElementById("bg");
+//        hideGame.style.display = "none";  
+//        showFireworks.style.display = "block"; 
+
+        
+        window.location.href = "final.html";
     }
     }
-   console.log(
-    "p2row: " +p2row+ ", p2score: " + p2Score + ", p2x: " + p2_x_currentLocation + ", p2y: " + p2_y_currentLocation +  ", rand2: " + rand2
-   );
+   //console.log("p2row: " +p2row+ ", p2score: " + p2Score + ", p2x: " + p2_x_currentLocation + ", p2y: " + p2_y_currentLocation +  ", rand2: " + rand2);
 }, false);  

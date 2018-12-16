@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title> Roll'UP game </title>
+        <meta chaarset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link href="../style/style.css" rel= "stylesheet">
+
+    </head>
+    <body>
+        
+    <!-- NAV BAR -->
+    <nav class=" [ navbar navbar-inverse ] ">
+      <div class=" [ container-fluid ] ">
+        <div class=" [ navbar-header ] ">
+          <a class=" [ navbar-brand ] " href="index.html"><img src= "../image/3d_logo_final.png" style="max-width: 70px"><img src="../image/site_heading.png" class=" [ heading_img ] "></a> 
+        </div>
+        <div class= " [ navbar-right ] " ><img src="../image/search_icon.png" class=" [ icon_index ] "></div>
+      </div>
+    </nav>
+
+   <!--content area -->  
+        <div class=" [ bgFireworks ] " style="color: white; width: 90%; height: 500px; text-align: center; padding: 5%;">
+            <h1>Congratulations!</h1><button class=" [ btn btn-outline-danger play_button ] " id="on_bg_click">Check Surprise</button>
+        </div>
+        
+    <!--  Footer section -->     
+    <div class = "[ row ] ">
+      <div class=" [ col-sm-12 ] ">
+        <div class=" [ myfooter ] ">
+            <div class=" [ container ] ">
+                <span class=" [ float-left ] ">&copy; Raja Waqas Ahmed 2018</span>
+                <span class=" [ float-right ] ">
+                    <img src="../image/twiter_icon.png" class=" [ icon_index ] ">
+                    <img src="../image/facebook_icon.png" class=" [ icon_index ] ">
+
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.fireworks.js"></script>         
+        <script>
+            setTimeout(function() {
+            $('#on_bg_click').click(function() { $('div.bgFireworks').fireworks(); });
+
+        });
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </body>
+</html>
